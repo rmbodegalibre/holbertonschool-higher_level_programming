@@ -2,6 +2,8 @@
 import random
 number = random.randint(-10000, 10000)
 lastd = abs(number) % 10
+if number < 0:
+    lastd = -lastd
 criteria = "Nothing"
 if lastd > 5:
     criteria = "and is greater than 5"
