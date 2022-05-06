@@ -9,5 +9,5 @@ if __name__ == "__main__":
     sm = 0
 
     for nums in range(num_args):
-        sm = sm + int(sys.argv[nums + 1]) 
+        sm = sm + int(sys.argv[nums + 1])
     print(f"{sm}")
