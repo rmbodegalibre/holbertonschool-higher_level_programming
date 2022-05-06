@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This script is used to create a basic calculator in python.
+
+Author: Ricardo Montaña
+Date: 5-05-2022
+"""
 
 if __name__ == "__main__":
     
