@@ -7,7 +7,7 @@ Date: 5-05-2022
 """
 
 if __name__ == "__main__":
-    
+
     from calculator_1 import *
     import sys
     num_args = len(sys.argv) - 1
