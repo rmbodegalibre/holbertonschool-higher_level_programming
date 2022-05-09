@@ -2,7 +2,7 @@
 
 def element_at(my_list, idx):
 
-    elem = my_list[idx]
     qtty = len(my_list)
-
-    return elem if (0 <= idx < qtty) else None 
+    if idx <= qtty:
+        elem = my_list[idx]
+        return elem if idx >= 0 else None 
