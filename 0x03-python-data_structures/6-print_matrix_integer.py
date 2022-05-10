@@ -13,4 +13,4 @@ def print_matrix_integer(matrix=[[]]):
                 print(matrix[row][col], end=" ")
             else:
                 print(matrix[row][col], end="")
-        print("")
+        print()
