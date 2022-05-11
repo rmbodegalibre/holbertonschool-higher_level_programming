@@ -2,4 +2,4 @@
 
 def print_sorted_dictionary(a_dictionary):
     for key, data in sorted(a_dictionary.items()):
-        print(f"{key} : {data}")
+        print(f"{key}: {data}")
