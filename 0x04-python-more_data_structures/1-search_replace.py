@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 def search_replace(my_list, search, replace):
-    list2 = my_list
-    for idx, value in enumerate(list2):
+    list2 = []
+    for idx, value in enumerate(my_list):
         if value == search:
-            list2[idx] = replace
+            list2.append(replace)
+        else:
+            list2.append(my_list[idx])
     return list2
