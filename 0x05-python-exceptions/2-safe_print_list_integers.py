@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
+
 def safe_print_list_integers(my_list=[], x=0):
-#my_list = [1, 2, 3, "School", 4, 5, [1, 2, 3]]
+    # my_list = [1, 2, 3, "School", 4, 5, [1, 2, 3]]
     qtty = 0
     elem = 0
-    #x = 5
+    # x = 5
 
     try:
         while elem < x:
