@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-# python3 -c 'print(__import__("my_module").MyClass.__doc__)'
-# class Square: Define a square with his feachures
+"""
+Square: Is an empty class to define square
+"""
 
 
 class Square:
+    """ Use pass to declare empty function  """
     pass
