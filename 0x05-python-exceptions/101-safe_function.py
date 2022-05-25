@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def safe_function(fct, *args):
     try:
         ptr_to_func = fct(*args)
