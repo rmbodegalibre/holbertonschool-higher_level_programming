@@ -6,6 +6,7 @@ Rectangle: Define a class to build a rectangle
 
 class Rectangle:
     number_of_instances = 0
+
     """ Initializing an instance of class rectangle  """
     def __init__(self, width=0, height=0):
         """ Defining size like private instance """
