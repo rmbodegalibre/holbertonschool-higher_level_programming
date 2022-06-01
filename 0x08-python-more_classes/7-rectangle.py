@@ -7,7 +7,7 @@ Rectangle: Define a class to build a rectangle
 class Rectangle:
     """
     Setting number of instances
-    """    
+    """
     number_of_instances = 0
     print_symbol = "#"
 
