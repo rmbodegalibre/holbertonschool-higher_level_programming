@@ -9,6 +9,9 @@ class Rectangle:
     Setting number of instances
     """    
     number_of_instances = 0
+    """
+    Setting symbol hashtag
+    """
     print_symbol = "#"
     """
     Initializing an instance of class rectangle
