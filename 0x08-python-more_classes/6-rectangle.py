@@ -5,11 +5,18 @@ Rectangle: Define a class to build a rectangle
 
 
 class Rectangle:
+    """
+    Setting number of instances
+    """
     number_of_instances = 0
 
-    """ Initializing an instance of class rectangle  """
+    """
+    Initializing an instance of class rectangle
+    """
     def __init__(self, width=0, height=0):
-        """ Defining size like private instance """
+        """
+        Defining size like private instance
+        """
         self.width = width
         self.height = height
         type(self).number_of_instances += 1
@@ -47,7 +54,9 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        """print the rectangle with the character # """
+        """
+        print the rectangle with the character #
+        """
         if self.__width == 0 or self.__height == 0:
             return ("")
 
@@ -59,12 +68,16 @@ class Rectangle:
         return ("".join(hashtag))
 
     def __repr__(self):
-        """Return the string representation of the Rectangle."""
+        """
+        Return the string representation of the Rectangle.
+        """
         hashtag = "Rectangle(" + str(self.__width)
         hashtag += ", " + str(self.__height) + ")"
         return (hashtag)
 
     def __del__(self):
-        """Print a message when an instance of rectangle is deleted."""
+        """
+        Print a message when an instance of rectangle is deleted.
+        """
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
