@@ -5,12 +5,15 @@ File: models/base.py - the first class Base
 
 
 class Base:
+    """
+    Base Class to define numbres of objects
+    """
     __nb_objects = 0
     """
     Private class attribute
     """
     def __init__(self, id=None):
-        """ Instantiation """
+        """ Instantiation for set values """
         if id is not None:
             self.id = id
         else:
