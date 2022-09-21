@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-print("01", end="")
-for i in range(102, 199):
-    #print(i)
-    if int(str(i)[2]) > int(str(i)[1]):
-         print(", {}".format(str(i)[1:]), end="")
-print("")
+for i in range(0, 10):
+    for j in range(i + 1, 10):
+        if i == 8 and j == 9:
+            print(f"{i}{j}")
+        else:
+            print(f"{i}{j}", end=", ")
