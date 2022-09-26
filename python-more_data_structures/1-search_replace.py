@@ -3,7 +3,10 @@ def search_replace(my_list, search, replace):
     if search not in my_list:
         return my_list
     else:
-        ind = my_list.index(search)
         new_list = list(my_list)
-        new_list[ind] = replace
+        it = 0
+        for i in new_list:
+            if i == search:
+                new_list[it] = replace
+            it += 1
         return new_list
