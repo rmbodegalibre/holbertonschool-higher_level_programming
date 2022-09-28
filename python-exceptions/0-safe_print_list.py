@@ -10,6 +10,7 @@ def safe_print_list(my_list=[], x=0):
                 if pos == x:
                     break
         else:
+            print("")
             return 0
     except TypeError:
         return pos
