@@ -28,7 +28,7 @@ class Square:
         return (self.__size ** 2)
 
     def my_print(self):
-        """ 
+        """
         Printing a square filled with the character "#"
         """
         if not self.__size:
