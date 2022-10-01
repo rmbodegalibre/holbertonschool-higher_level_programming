@@ -25,7 +25,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = val
 
-
     @property
     def pos(self):
         """
@@ -33,16 +32,18 @@ class Square:
         """
         return (self.__pos)
 
-
     @pos.setter
     def pos(self, val):
         """ Method position to set self.__position with value
         Args:
             value (int): value to set the self.__position variable
         """
-        if type(val) != tuple or len(val) != 2 or \
-           not all([type(i) == int for i in val]) or \
-           not all([i >= 0 for i in val]):
+    @pos.setter
+    def pos(self, val):
+        if (not isinstance(val, tuple) or
+                len(val) != 2 or
+                not all(isinstance(num, int) for num in val) or
+                not all(num >= 0 for num in val)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__pos = val
 
