@@ -1,0 +1,11 @@
+This function receive two values, then evaluate this values,
+both numbers must be integers.
+
+Importing module add_integer
+
+	>>> add = __import__("0-add_integer").add_integer
+
+Now, doing tests
+
+	>>> add(2, 1)
+	3
