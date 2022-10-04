@@ -64,4 +64,8 @@ Now, doing tests
     >>> add_integer("Hello", "Peers")
     Traceback (most recent call last):
     NameError: name 'add_integer' is not defined
-    
+
+    >>> add(1, float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
