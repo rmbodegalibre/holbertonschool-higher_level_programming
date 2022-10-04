@@ -27,3 +27,41 @@ Now, doing tests
 
     >>> add(2)
     100
+
+    >>> add("School", 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add(1, "School")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add(float("inf"), 1)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add(1, float("inf"))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add(-float("inf"), 1)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add([1, 2, 3], 0)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add(0, [1, 2, 3])
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer("Hello", "Peers")
+    Traceback (most recent call last):
+    NameError: name 'add_integer' is not defined
+    
