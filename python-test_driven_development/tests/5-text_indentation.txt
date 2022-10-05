@@ -49,9 +49,7 @@ Sin aliud quid voles, postea.
 
 Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 
-Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
-
->>> ti()
+Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres>>> ti()
 Traceback (most recent call last):
     ...
 TypeError: text_indentation() missing 1 required positional argument: 'text'
