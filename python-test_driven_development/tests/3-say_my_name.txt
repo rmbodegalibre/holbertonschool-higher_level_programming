@@ -8,27 +8,27 @@ This function receive two values
 
 Importing module say_my_name
 
-sn = __import__('3-say_my_name').say_my_name
+>>> sn = __import__('3-say_my_name').say_my_name
 
 Now, doing tests
 
->>> say_my_name("Ricardo", "Montaña")
+>>> sn("Ricardo", "Montaña")
 My name is Ricardo Montaña
 
->>> say_my_name("Ricardo")
+>>> sn("Ricardo")
 My name is Ricardo 
 
->>> say_my_name("Ricardo", 50)
+>>> sn("Ricardo", 50)
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
 
->>> say_my_name(50, "Montaña")
+>>> sn(50, "Montaña")
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
->>> say_my_name(50, 50)
+>>> sn(50, 50)
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
