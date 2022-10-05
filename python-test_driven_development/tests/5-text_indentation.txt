@@ -14,42 +14,10 @@ Importing module print_square
 
 Now, doing tests
 
->>> ti("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
-... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
-... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
-... Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
-... rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
-... stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
-... cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
-... beatiorem! Iam ruinas videres""")
+>>> ti("Lorem ipsum dolor sit amet, consectetur adipiscing elit.") 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-Quonam modo?
-
-Utrum igitur tibi litteram videor an totas paginas commovere?
-
-Non autem hoc:
-
-igitur ne illud quidem.
-
-Fortasse id optimum, sed ubi illud:
-
-Plus semper voluptatis?
-
-Teneo, inquit, finem illi videri nihil dolere.
-
-Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
-
-Si id dicis, vicimus.
-
-Inde sermone vario sex illa a Dipylo stadia confecimus.
-
-Sin aliud quid voles, postea.
-
-Quae animi affectio suum cuique tribuens atque hanc, quam dico.
-
-Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres>>> ti()
+>>> ti()
 Traceback (most recent call last):
     ...
 TypeError: text_indentation() missing 1 required positional argument: 'text'
@@ -68,3 +36,28 @@ TypeError: text must be a string
 Traceback (most recent call last):
     ...
 NameError: name 'abc' is not defined
+
+>>> try:
+...     ti(["word1", "word2"])
+... except Exception as e:
+...     print(e)
+...
+text must be a string
+>>> try:
+...     ti(None)
+... except Exception as e:
+...     print(e)
+...
+text must be a string
+>>> try:
+...     ti(5)
+... except Exception as e:
+...     print(e)
+...
+text must be a string
+>>> try:
+...     ti()
+... except Exception as e:
+...     print(e)
+...
+text_indentation() missing 1 required positional argument: 'text'

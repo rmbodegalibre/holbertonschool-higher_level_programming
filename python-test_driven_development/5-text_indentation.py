@@ -28,8 +28,9 @@ def text_indentation(text):
             continue
         elif i == " " and text[pos-1] in [" ", ".", "?", ":"]:
             continue
-        elif i in [".", "?", ":"] and pos < lng:
+        elif i in [".", "?", ":"]:
             print(i)
-            print()
+            if pos + 1 < lng:
+                print()
         else:
             print(i, end="")
