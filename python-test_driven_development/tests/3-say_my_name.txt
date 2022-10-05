@@ -1,0 +1,34 @@
+This function receive two values
+
+    This function prints My name is <first name> <last name>
+    first_name and last_name must be strings
+    otherwise, raise a TypeError exception with the message:
+    "first_name must be a string" or
+    "last_name must be a string"
+
+Importing module say_my_name
+
+sn = __import__('3-say_my_name').say_my_name
+
+Now, doing tests
+
+>>> say_my_name("Ricardo", "Montaña")
+My name is Ricardo Montaña
+
+>>> say_my_name("Ricardo")
+My name is Ricardo 
+
+>>> say_my_name("Ricardo", 50)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name(50, "Montaña")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name(50, 50)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
