@@ -1,0 +1,69 @@
+This function receive one value as size
+
+    This function prints a square with the character #.
+    size is the size length of the square
+    size must be an integer,
+    otherwise raise a TypeError exception with the message:
+    "size must be an integer"
+    if size is less than 0,
+    raise a ValueError exception with the message:
+    "size must be >= 0"
+    if size is a float and is less than 0,
+    raise a TypeError exception with the message:
+    "size must be an integer"
+
+Importing module print_square
+
+>>> ps = __import__('4-print_square').print_square
+
+Now, doing tests
+
+>>> ps(4) 
+####
+####
+####
+####
+
+>>> ps(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+>>> ps(0)
+
+>>> ps(1)
+#
+
+>>> try:
+...     ps(-1)
+... except Exception as e:
+...     print(e)
+... 
+size must be >= 0
+
+>>> ps(-1)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+>>> ps("A")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> ps(-2.15)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> ps(2.15)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
