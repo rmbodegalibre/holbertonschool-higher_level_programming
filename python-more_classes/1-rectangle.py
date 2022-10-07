@@ -7,8 +7,8 @@ This program contains a class Rectangle that defines a rectangle by:
 
 class Rectangle:
     """This class defines a rectangle by: (based on 0-rectangle.py)"""
-    
-    def __init__(self, width, height):
+
+    def __init__(self, width=0, height=0):
         """Initializing the class Rectangle"""
         self.height = height
         self.width = width
