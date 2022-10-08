@@ -29,29 +29,11 @@ def text_indentation(text):
         elif i == " " and text[pos-1] in [" ", ".", "?", ":"]:
             continue
         elif i == " " and text[pos+1] in [" ", ".", "?", ":"]:
-            continue        
-        elif i in [".", "?", ":"]:
-
-            print(i)
-            if pos + 1 < lng:
-                print()
-        else:
-            print(i, end="")            
-        
-
-"""
-    pos = -1
-    lng = len(text)
-    for i in text:
-        pos += 1
-        if i == " " and pos == 0:
-            continue
-        elif i == " " and text[pos-1] in [" ", ".", "?", ":"]:
             continue
         elif i in [".", "?", ":"]:
+
             print(i)
             if pos + 1 < lng:
                 print()
         else:
             print(i, end="")
-"""
