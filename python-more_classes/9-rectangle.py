@@ -92,7 +92,7 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """
-        This method returns a new Rectangle instance with
+        This method returns a new rectangle instance with
         width == height == size
         Args:
             cls: Type[Self@Rectangle]
