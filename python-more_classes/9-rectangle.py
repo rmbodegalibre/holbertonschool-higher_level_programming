@@ -11,7 +11,7 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-    def __init__(self, width=0, height=0):
+    def __init__(self,  width=0, height=0):
         """Initializing the class Rectangle, add 1 instance to the counter"""
         self.height = height
         self.width = width
@@ -31,18 +31,18 @@ class Rectangle:
     def width(self, value):
         """Setter for width Property"""
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__width = value
 
     @height.setter
     def height(self, value):
         """Setter for height Property"""
         if not isinstance(value, int):
-            raise TypeError("height must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("height must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__height = value
 
     def area(self):
