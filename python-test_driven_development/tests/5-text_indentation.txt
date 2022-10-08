@@ -64,15 +64,3 @@ text_indentation() missing 1 required positional argument: 'text'
 
 >>> ti("\n")
 <BLANKLINE>
-
->>> ti(\n)
-  File "<stdin>", line 1
-    ti(\n)
-         ^
-SyntaxError: unexpected character after line continuation character
-
->>> ti(<BLANKLINE>)
-  File "<stdin>", line 1
-    ti(<BLANKLINE>)
-       ^
-SyntaxError: invalid syntax
