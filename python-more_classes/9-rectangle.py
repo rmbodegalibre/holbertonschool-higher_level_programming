@@ -98,4 +98,4 @@ class Rectangle:
             cls: Type[Self@Rectangle]
             size: Int
         """
-        return (cls(size, size))
+        return Rectangle(size, size)
