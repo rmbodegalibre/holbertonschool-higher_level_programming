@@ -73,10 +73,3 @@ TypeError: list expected at most 1 argument, got 2
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
->>> L = my_list([])
->>> L.print_sorted()
-[]
-
->>> L = my_list([1, -2])
->>> L.print_sorted()
-[-2, 1]
