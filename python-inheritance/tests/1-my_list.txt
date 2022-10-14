@@ -59,3 +59,7 @@ TypeError: list expected at most 1 argument, got 2
 
 >>> b.print_sorted()
 []
+
+>>> my_list = MyList()
+>>> print(my_list.print_sorted)
+<bound method MyList.print_sorted of []>
