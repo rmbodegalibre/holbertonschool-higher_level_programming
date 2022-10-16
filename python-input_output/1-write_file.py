@@ -13,6 +13,6 @@ def write_file(filename="", text=""):
     * It should create the file if doesn’t exist.
     * should overwrite the content of the file if it already exists.
     """
-    with open(filename, "r+", encoding="utf-8") as fName:
+    with open(filename, "w", encoding="utf-8") as fName:
         fName.write(text)
     return len(text)
