@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 File: 11-student.py - Write a class Student that defines a student by:
 (based on 10-student.py)
