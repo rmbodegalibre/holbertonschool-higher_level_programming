@@ -99,7 +99,13 @@ class Rectangle(Base):
         public method def display(self): that prints in stdout the
         Rectangle instance with the character #
         """
+        for down in range(self.__y):
+            print()
+
         for i in range(self.__height):
+            for right in range(self.__x):
+                print(" ", end="")
+                
             for j in range(self.__width):
                 print('#', end="")
             print()
