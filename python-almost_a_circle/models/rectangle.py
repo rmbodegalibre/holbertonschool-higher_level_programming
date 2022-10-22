@@ -4,7 +4,6 @@ This module contains the class Rectangle that inherits of Base
 """
 from models.base import Base
 
-
 class Rectangle(Base):
     """
     class Rectangle that inherits of Base
@@ -51,12 +50,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """getter for heignt"""
+        """getter for height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter for heignt"""
+        """setter for height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value <= 0:
