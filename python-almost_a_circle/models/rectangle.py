@@ -19,7 +19,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        super().__init__(id)        
+        super().__init__(id)
 
         """
         Private instance attributes, each with its own public getter and setter
