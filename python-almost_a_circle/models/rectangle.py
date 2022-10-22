@@ -4,6 +4,7 @@ This module contains the class Rectangle that inherits of Base
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     class Rectangle that inherits of Base
@@ -15,10 +16,22 @@ class Rectangle(Base):
         Assign each argument width, height, x and y to the right attribute
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        else:
+            self.__width = width
+        if not isinstance(height, int):
+            raise TypeError("width must be an integer")
+        else:
+            self.__height = height
+        if not isinstance(x, int):
+            raise TypeError("width must be an integer")
+        else:
+            self.__x = x
+        if not isinstance(y, int):
+            raise TypeError("width must be an integer")
+        else:
+            self.__y = y
 
         """
         Private instance attributes, each with its own public getter and setter
