@@ -15,10 +15,10 @@ class Rectangle(Base):
         the logic of the __init__ of the Base class
         Assign each argument width, height, x and y to the right attribute
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
         """
