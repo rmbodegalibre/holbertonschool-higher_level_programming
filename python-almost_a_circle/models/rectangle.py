@@ -121,8 +121,9 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
+        def update(self, *args):
         Public method that assigns an argument to each attribute:
         1st argument should be the id attribute
         2nd argument should be the width attribute
@@ -131,6 +132,11 @@ class Rectangle(Base):
         5th argument should be the y attribute
         This type of argument is called a “no-keyword argument”
         - Argument order is super important.
+        ---
+        Updating the public method by changing the prototype to
+        update(self, *args, **kwargs) that assigns a key/value argument
+        to attributes
+
         """
         if len(args) > 0:
             self.id = args[0]
@@ -142,3 +148,14 @@ class Rectangle(Base):
             self.__x = args[3]
         if len(args) > 4:
             self.__y = args[4]
+        if "id" in kwargs:
+            self.id = kwargs["id"]    
+        if "width" in kwargs:
+            self.__width = kwargs["width"]
+        if "height" in kwargs:
+            self.__height = kwargs["height"]        
+        if "x" in kwargs:
+            self.__x = kwargs["x"]
+        if "y" in kwargs:
+            self.__y = kwargs["y"]
+                   
