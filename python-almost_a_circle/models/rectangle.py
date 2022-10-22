@@ -15,23 +15,11 @@ class Rectangle(Base):
         the logic of the __init__ of the Base class
         Assign each argument width, height, x and y to the right attribute
         """
-        super().__init__(id)
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        else:
-            self.__width = width
-        if not isinstance(height, int):
-            raise TypeError("width must be an integer")
-        else:
-            self.__height = height
-        if not isinstance(x, int):
-            raise TypeError("width must be an integer")
-        else:
-            self.__x = x
-        if not isinstance(y, int):
-            raise TypeError("width must be an integer")
-        else:
-            self.__y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+        super().__init__(id)        
 
         """
         Private instance attributes, each with its own public getter and setter
@@ -56,10 +44,9 @@ class Rectangle(Base):
         """setter for width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif value <= 0:
+        if value < 1:
             raise ValueError("width must be > 0")
-        else:
-            self.__width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -71,10 +58,9 @@ class Rectangle(Base):
         """setter for height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif value <= 0:
+        if value < 1:
             raise ValueError("height must be > 0")
-        else:
-            self.__height = value
+        self.__height = value
 
     @property
     def x(self):
@@ -86,10 +72,9 @@ class Rectangle(Base):
         """setter for x"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("x must be >= 0")
-        else:
-            self.__x = value
+        self.__x = value
 
     @property
     def y(self):
@@ -101,7 +86,6 @@ class Rectangle(Base):
         """setter for y"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
-        else:
-            self.__y = value
+        self.__y = value
