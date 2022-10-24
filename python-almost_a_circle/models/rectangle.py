@@ -158,3 +158,21 @@ class Rectangle(Base):
             self.__x = kwargs["x"]
         if "y" in kwargs:
             self.__y = kwargs["y"]
+
+    def to_dictionary(self):
+        """
+        public method that returns the dictionary representation of a Rectangle
+        This dictionary must contain:
+        * id
+        * width
+        * height
+        * x
+        * y
+        """
+        dictio = {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y}
+        return dictio
