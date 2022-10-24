@@ -55,3 +55,16 @@ class Base:
                 lst.append(i.to_dictionary())
         with open(cls.__name__ + ".json", "w") as f:
             f.write(cls.to_json_string(lst))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Static method that returns the list of the JSON string
+        representation json_string
+        * json_string is a string representing a list of dictionaries
+        * If json_string is None or empty, return an empty list
+        * Otherwise, return the list represented by json_string
+        """
+        if json_string is None:
+            return []
+        return json.loads(json_string)
