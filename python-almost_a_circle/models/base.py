@@ -3,6 +3,7 @@
 This module contains the first class Base:
 """
 import json
+import csv
 
 
 class Base:
@@ -112,5 +113,65 @@ class Base:
                 for i in list_dics:
                     lst.append(cls.create(**i))
                 return lst
+        except:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Classmethod that serializes in CSV
+        * The filename must be: <Class name>.csv - example: Rectangle.csv
+        * Has the same behavior as the JSON serialization
+        * Format of the CSV:
+        --- Rectangle: <id>,<width>,<height>,<x>,<y>
+        --- Square: <id>,<size>,<x>,<y>
+        """
+        with open(cls.__name__ + ".csv", "w") as f:
+            file_writer = csv.writer(f, delimiter=',')
+            for obj in list_objs:
+                my_list = []
+                if cls.__name__ == "Rectangle":
+                    my_list.append(obj.id)
+                    my_list.append(obj.width)
+                    my_list.append(obj.height)
+                    my_list.append(obj.x)
+                    my_list.append(obj.y)
+                elif cls.__name__ == "Square":
+                    my_list.append(obj.id)
+                    my_list.append(obj.size)
+                    my_list.append(obj.x)
+                    my_list.append(obj.y)
+                file_writer.writerow(my_list)        
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Class method that deserializes in CSV
+        * The filename must be: <Class name>.csv - example: Rectangle.csv
+        * Has the same behavior as the JSON deserialization
+        * Format of the CSV:
+        --- Rectangle: <id>,<width>,<height>,<x>,<y>
+        --- Square: <id>,<size>,<x>,<y>       
+        """
+        try:
+            with open(cls.__name__ + ".csv", "r") as f:
+                rs = csv.reader(f, delimiter=',')
+                file_reader = []
+                if cls.__name__ == "Rectangle":
+                    for i in rs:
+                        r = cls(
+                                int(i[1]),
+                                int(i[2]),
+                                int(i[3]),
+                                int(i[4]),
+                                int(i[0])
+                                )
+                        file_reader.append(r)
+                    return file_reader
+                elif cls.__name__ == "Square":
+                    for i in rs:
+                        r = cls(int(i[1]), int(i[2]), int(i[3]), int(i[0]))
+                        file_reader.append(r)
+                    return file_reader
         except:
             return []
