@@ -141,7 +141,7 @@ class Base:
                     my_list.append(obj.size)
                     my_list.append(obj.x)
                     my_list.append(obj.y)
-                file_writer.writerow(my_list)        
+                file_writer.writerow(my_list)
 
     @classmethod
     def load_from_file_csv(cls):
@@ -151,7 +151,7 @@ class Base:
         * Has the same behavior as the JSON deserialization
         * Format of the CSV:
         --- Rectangle: <id>,<width>,<height>,<x>,<y>
-        --- Square: <id>,<size>,<x>,<y>       
+        --- Square: <id>,<size>,<x>,<y>
         """
         try:
             with open(cls.__name__ + ".csv", "r") as f:
