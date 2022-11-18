@@ -13,12 +13,12 @@ import MySQLdb
 import sys
 
 
-def mysql_db(argv):
-    conn = MySQLdb.connect(host="localhost",
-                           port=3306,
-                           user=argv[1],
-                           passwd=argv[2],
-                           db=argv[3],
+def mysql_db():
+    conn = ""
+    conn = MySQLdb.connect(port=3306,
+                           user=sys.argv[1],
+                           passwd=sys.argv[2],
+                           db=sys.argv[3],
                            charset="utf8")
     cur = conn.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
