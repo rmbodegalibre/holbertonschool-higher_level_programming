@@ -28,6 +28,7 @@ def mysql_db():
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
+    pass
     cur.close()
     conn.close()
 
