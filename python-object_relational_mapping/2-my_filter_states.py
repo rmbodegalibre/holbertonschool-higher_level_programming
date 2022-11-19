@@ -24,7 +24,7 @@ def mysql_db():
                            charset="utf8")
     cur = conn.cursor()
     cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}%'\
-                ORDER BY id ASC".format(argv[4]))
+                ORDER BY id ASC".format(sys.argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
