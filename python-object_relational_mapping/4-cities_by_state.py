@@ -22,7 +22,7 @@ def mysql_db():
     cur.execute("SELECT cities.id, cities.name, states.name\
                     FROM states RIGHT JOIN cities\
                     ON states.id = cities.state_id")
-    #[print(state) for state in cursor.fetchall()]
+    # [print(state) for state in cursor.fetchall()]
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
