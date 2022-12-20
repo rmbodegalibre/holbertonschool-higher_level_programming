@@ -1,8 +1,3 @@
 #!/usr/bin/node
-module.exports = class Rectangle {
-  // define the properties
-  constructor(w, h) {
-    this.width = w;
-    this.height = h;
-  }
-};
+// This script contains an empty class Rectangle that defines a rectangle:
+module.exports = class Rectangle { };
