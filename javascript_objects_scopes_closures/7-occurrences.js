@@ -3,4 +3,4 @@
 exports.nbOccurences = function (list, searchElement) {
   list = list.filter(element => element === searchElement);
   return list.length;
-}
+};
