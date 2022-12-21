@@ -1,6 +1,10 @@
 #!/usr/bin/node
+// This script contains a class Rectangle that defines a rectangle:
+// This script uses the class notation for defining your class
+// The constructor takes 2 arguments w and h
+// This initializes the instance attribute width with the value of w
+// This initializes the instance attribute height with the value of h
 module.exports = class Rectangle {
-  // define the properties
   constructor (w, h) {
     this.width = w;
     this.height = h;
