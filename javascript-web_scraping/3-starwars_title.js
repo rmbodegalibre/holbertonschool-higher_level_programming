@@ -4,7 +4,7 @@
 // It uses the Star wars API with the endpoint https://swapi-api.hbtn.io/api/films/:id
 // It uses the module request
 const reqTitle = require('request');
-let url = 'http://swapi.co/api/films/' + process.argv[2];
+let url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 reqTitle(url, function (error, response, body) {
   console.log(error || JSON.parse(body).title);
 });
