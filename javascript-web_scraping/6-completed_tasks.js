@@ -7,7 +7,7 @@ const reqNumTasks = require('request');
 reqNumTasks(process.argv[2], function (error, response, body) {
   if (!error) {
     const todos = JSON.parse(body);
-    let completedTasks = {};
+    const completedTasks = {};
     todos.forEach((todo) => {
       if (todo.completed && completedTasks[todo.userId] === undefined) {
         completedTasks[todo.userId] = 1;
